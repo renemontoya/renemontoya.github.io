@@ -3,20 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>René Montoya</title>
+  <title>René Montoya - Personal Page</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>René Javier Montoya Tapia</h1>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">René Javier Montoya Tapia</h1>
+      <p class="subtitle">Personal Website for Web Technologies</p>
+    </header>
 
-  <p>
-    Electrical Engineering student interested in automation, energy and technology.
-  </p>
+    <section class="card">
+      <h2>About Me</h2>
+      <p><strong>Name:</strong> René Javier Montoya Tapia</p>
+      <p><strong>Major:</strong> Civil Electrical Engineering</p>
+      <p><strong>Year of University Enrollment:</strong> 2021</p>
+      <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/renemontoya" target="_blank">github.com/renemontoya</a>
+      </p>
+      <p>
+        <strong>Personal Summary:</strong>
+        I am a Civil Electrical Engineering student interested in automation, energy, robotics,
+        programming, and technology innovation. I enjoy building engineering projects and learning
+        new tools that help me solve real-world problems.
+      </p>
+    </section>
 
-  <img src="https://via.placeholder.com/200" alt="profile">
+    <section class="card">
+      <h2>Skills</h2>
+      <table class="skills-table">
+        <thead>
+          <tr>
+            <th>Skill</th>
+            <th>Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Python</td><td>Advanced</td></tr>
+          <tr><td>JavaScript</td><td>Basic</td></tr>
+          <tr><td>HTML/CSS</td><td>Basic</td></tr>
+          <tr><td>Git</td><td>Basic</td></tr>
+          <tr><td>Excel</td><td>Advanced</td></tr>
+          <tr><td>SQL</td><td>Basic</td></tr>
+          <tr><td>English</td><td>Advanced</td></tr>
+          <tr><td>Spanish</td><td>Native</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-  <p>
-    Visit <a href="https://github.com/" target="_blank">GitHub</a>
-  </p>
+    <section class="card">
+      <h2>Interactive Section</h2>
+      <p>Write a short message and press the button to update the text below:</p>
+
+      <input type="text" id="userInput" class="text-input" placeholder="Type something here">
+      <button class="button" onclick="changeMessage()">Update Message</button>
+
+      <p id="dynamicText" class="dynamic-text">This text will change when you use the input and button.</p>
+    </section>
+  </div>
+
+  <script>
+    function changeMessage() {
+      const input = document.getElementById("userInput").value;
+      const dynamicText = document.getElementById("dynamicText");
+
+      if (input.trim() !== "") {
+        dynamicText.textContent = input;
+      } else {
+        dynamicText.textContent = "Please enter some text first.";
+      }
+    }
+  </script>
 </body>
 </html>
